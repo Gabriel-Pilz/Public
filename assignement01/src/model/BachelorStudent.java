@@ -1,7 +1,8 @@
 package model;
 
 public class BachelorStudent implements Student {
-	private String name;
+	private String vorname;
+	private String nachname;
 	private String matrNr;
 	private double avgGrade;
 
@@ -12,7 +13,7 @@ public class BachelorStudent implements Student {
 
 	@Override
 	public String getName() {
-		return name;
+		return vorname + nachname;
 	}
 
 	@Override
@@ -25,8 +26,9 @@ public class BachelorStudent implements Student {
 		return avgGrade;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String vorname, String nachname) {
+		this.vorname = vorname;
+		this.nachname = nachname;
 	}
 
 	public void setMatrNr(String matrNr) {
